@@ -1,7 +1,7 @@
 inherit emacs qt5
 
 NAME="cmake"
-VERSION=3.20.0
+VERSION=3.23.2
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="Cross-platform makefile generation system"
@@ -15,8 +15,7 @@ HOMEPAGE="http://www.cmake.org/"
 SRC_URI="https://github.com/Kitware/CMake/releases/download/v${VERSION}/cmake-${VERSION}.tar.gz
 https://github.com/Kitware/CMake/releases/download/v${VERSION}/cmake-${VERSION}-SHA-256.txt.asc"
 
-PATCH_URI="3.20.0-kwsys.patch
-"
+# PATCH_URI="3.20.0-kwsys.patch"
 
 BUILD_REQUIRES="libarchive-devel libcurl-devel libexpat-devel libjsoncpp-devel libncurses-devel librhash-devel libuuid-devel libuv-devel zlib-devel libQt5Core-devel libQt5Gui-devel librhash-devel libbz2-devel liblzma-devel libzstd-devel python38-sphinx python38-alabaster emacs " 
 # This list might be insufficient.
