@@ -17,7 +17,7 @@ HOMEPAGE="http://www.cmake.org/"
 SRC_URI="https://github.com/Kitware/CMake/releases/download/v${VERSION}/cmake-${VERSION}.tar.gz
 https://github.com/Kitware/CMake/releases/download/v${VERSION}/cmake-${VERSION}-SHA-256.txt.asc"
 
-BUILD_REQUIRES="libarchive-devel libcurl-devel libexpat-devel libjsoncpp-devel libncurses-devel librhash-devel libuuid-devel libuv-devel zlib-devel libQt5Core-devel libQt5Gui-devel librhash-devel libbz2-devel liblzma-devel libzstd-devel python39-sphinx python39-alabaster python39-sphinxcontrib-applehelp emacs vim "
+BUILD_REQUIRES="libarchive-devel libcurl-devel libexpat-devel libjsoncpp-devel libncurses-devel librhash-devel libuuid-devel libuv-devel zlib-devel libQt5Core-devel libQt5Gui-devel librhash-devel libbz2-devel liblzma-devel libzstd-devel python39-sphinx python39-sphinxcontrib-applehelp python39-sphinxcontrib-devhelp python39-sphinxcontrib-htmlhelp python39-sphinxcontrib-jsmath python39-sphinxcontrib-qthelp python39-sphinxcontrib-serializinghtml python39-sphinxcontrib-websupport python39-alabaster emacs vim "
 # This list might be insufficient.
 
 
