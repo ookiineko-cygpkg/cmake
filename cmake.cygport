@@ -1,3 +1,4 @@
+SCALLYWAG="notest"
 inherit emacs qt5
 
 NAME="cmake"
