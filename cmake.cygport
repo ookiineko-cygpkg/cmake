@@ -18,6 +18,8 @@ HOMEPAGE="http://www.cmake.org/"
 SRC_URI="https://github.com/Kitware/CMake/releases/download/v${VERSION}/cmake-${VERSION}.tar.gz
 https://github.com/Kitware/CMake/releases/download/v${VERSION}/cmake-${VERSION}-SHA-256.txt.asc"
 
+PATCH_URI="asm-no-fpic.patch"
+
 BUILD_REQUIRES="libarchive-devel libcurl-devel libexpat-devel libjsoncpp-devel libncurses-devel librhash-devel libuuid-devel libuv-devel zlib-devel librhash-devel libbz2-devel liblzma-devel libzstd-devel python39-sphinx python39-sphinxcontrib-applehelp python39-sphinxcontrib-devhelp python39-sphinxcontrib-htmlhelp python39-sphinxcontrib-jsmath python39-sphinxcontrib-serializinghtml python39-sphinxcontrib-websupport python39-alabaster "
 
 PKG_NAMES="${NAME} ${NAME}-doc emacs-cmake \

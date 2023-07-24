@@ -1,0 +1,9 @@
+--- origsrc/cmake-3.25.3/Modules/Platform/CYGWIN-Clang-ASM.cmake	1970-01-01 08:00:00.000000000 +0800
++++ src/cmake-3.25.3/Modules/Platform/CYGWIN-Clang-ASM.cmake	2023-07-24 20:50:00.899033700 +0800
+@@ -0,0 +1 @@
++include(Platform/CYGWIN-GNU-ASM)
+--- origsrc/cmake-3.25.3/Modules/Platform/CYGWIN-GNU-ASM.cmake	1970-01-01 08:00:00.000000000 +0800
++++ src/cmake-3.25.3/Modules/Platform/CYGWIN-GNU-ASM.cmake	2023-07-24 20:49:12.859578000 +0800
+@@ -0,0 +1,2 @@
++include(Platform/CYGWIN-GNU)
++__cygwin_compiler_gnu(ASM)
