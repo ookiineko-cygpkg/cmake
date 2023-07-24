@@ -1,5 +1,5 @@
 SCALLYWAG="notest"
-inherit emacs qt5
+inherit emacs
 
 NAME="cmake"
 VERSION=3.25.3
@@ -18,26 +18,15 @@ HOMEPAGE="http://www.cmake.org/"
 SRC_URI="https://github.com/Kitware/CMake/releases/download/v${VERSION}/cmake-${VERSION}.tar.gz
 https://github.com/Kitware/CMake/releases/download/v${VERSION}/cmake-${VERSION}-SHA-256.txt.asc"
 
-BUILD_REQUIRES="libarchive-devel libcurl-devel libexpat-devel libjsoncpp-devel libncurses-devel librhash-devel libuuid-devel libuv-devel zlib-devel libQt5Core-devel libQt5Gui-devel librhash-devel libbz2-devel liblzma-devel libzstd-devel python39-sphinx python39-sphinxcontrib-applehelp python39-sphinxcontrib-devhelp python39-sphinxcontrib-htmlhelp python39-sphinxcontrib-jsmath python39-sphinxcontrib-qthelp python39-sphinxcontrib-serializinghtml python39-sphinxcontrib-websupport python39-alabaster emacs vim "
+BUILD_REQUIRES="libarchive-devel libcurl-devel libexpat-devel libjsoncpp-devel libncurses-devel librhash-devel libuuid-devel libuv-devel zlib-devel librhash-devel libbz2-devel liblzma-devel libzstd-devel python39-sphinx python39-sphinxcontrib-applehelp python39-sphinxcontrib-devhelp python39-sphinxcontrib-htmlhelp python39-sphinxcontrib-jsmath python39-sphinxcontrib-serializinghtml python39-sphinxcontrib-websupport python39-alabaster "
 
-PKG_NAMES="${NAME} ${NAME}-gui ${NAME}-doc \
-	emacs-cmake vim-cmake bash-completion-cmake"
+PKG_NAMES="${NAME} ${NAME}-doc emacs-cmake \
+	vim-cmake bash-completion-cmake"
 cmake_CONTENTS="
-	--exclude=cmake-gui.*
 	usr/bin/
 	usr/share/aclocal/
 	usr/share/cmake*/
 	usr/share/man/"
-
-cmake_gui_SUMMARY="${SUMMARY} (GUI)"
-cmake_gui_REQUIRES=${NAME}
-cmake_gui_CONTENTS="
-	etc/
-	usr/bin/cmake-gui.exe
-	usr/share/applications/
-	usr/share/man/man1/cmake-gui.*
-	usr/share/cmake*/Help/manual/cmake-gui.1.rst
-	usr/share/icons/ usr/share/mime/"
 
 cmake_doc_SUMMARY="${SUMMARY} (documentation)"
 cmake_doc_CONTENTS="usr/share/doc/"
@@ -65,8 +54,6 @@ src_compile() {
 		--datadir=/share/${NAME}-${VERSION} \
 		--docdir=/share/doc/${NAME} \
 		--mandir=/share/man \
-		--qt-gui \
-		--qt-qmake=${QT5_QMAKE} \
 		--system-libs \
 		--sphinx-man --sphinx-html \
 	|| error "bootstrap failed"
